@@ -1,0 +1,9 @@
+*{
+    background: red;
+}
+
+.intro{
+    background: green;
+    text-align: center;
+    display: block;
+}
