@@ -1,9 +1,17 @@
 *{
-    background: red;
+    margin: 0;
 }
 
-.intro{
-    background: green;
-    text-align: center;
+.menu{
     display: block;
+    height: 80px;
+    background: red;
+    opacity: .5;
+}
+
+.menu1{
+font-family: Arial, Helvetica, sans-serif;
+margin: 0 auto;
+
+
 }
