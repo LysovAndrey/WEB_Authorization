@@ -91,11 +91,26 @@ main{
     border-radius: 25px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     text-align: center;
-    
+
 }
 
-.form_title{
+.form__title{
     font-size: 21px;
     margin: 50px auto;
-
 }
+
+.form_text_input{
+    margin: 0;
+    background: #1b459e;
+}
+.edit[type="text"]{
+    background: #2a9e1b;
+}
+.sliyder{
+    width: 100%;
+    height: 10px;
+    background: #9e1b1b;
+}
+
+
+
