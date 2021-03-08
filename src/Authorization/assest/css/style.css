@@ -1,116 +1,175 @@
 *,
 *::after,
-*::before{
-    box-sizing: border-box;
+*::before {
+  box-sizing: inherit;
 }
 
-body{
-    margin: 0;
-    color: #333;
-    line-height: 1.6;
-    background: #f2f2f2;
-    font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Header */
-.header{
-    width: 100%;
-    height: 80px;
-    background: #1b459e;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
+.header {
+  width: 100%;
+  height: 80px;
+  background: #1b459e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
 }
 
-.header_inner{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header_inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header_logo{
-    font-size: 24px;
-    color: #fff;
-    margin: 0 100px;
-    text-align: center;
+.header_logo {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 100px;
+  text-align: center;
+  display: block;
 }
 
-.nav{
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0 50px;
+.nav {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 50px;
 }
 
-.nav__link{
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    transition: color .1s linear;
+.nav__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: color 0.1s linear;
 }
 
-.nav__link::after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #E49700;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    transition: opacity .1s linear;
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #e49700;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.1s linear;
 }
-.nav__link:hover::after{
-    opacity: 1;
+.nav__link:hover::after {
+  opacity: 1;
 }
-.nav__link:hover{
-    color: #E49700;
-}
-/* main */
-main{
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-
+.nav__link:hover {
+  color: #e49700;
 }
 
-/* form */
-.form{
-    margin: 200px auto;
-    width: 390px;
-    height: 480px;
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    text-align: center;
-
+/* limiter */
+.limiter {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.form__title{
-    font-size: 21px;
-    margin: 50px auto;
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;
 }
 
-.form_text_input{
-    margin: 0;
-    background: #1b459e;
-}
-.edit[type="text"]{
-    background: #2a9e1b;
-}
-.sliyder{
-    width: 100%;
-    height: 10px;
-    background: #9e1b1b;
+/* Login */
+.wrap-login100 {
+  width: 390px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 77px 55px 3px;
 }
 
+/* Form */
+.login100-form {
+  width: 100%;
+}
 
+/* Form Title*/
+.login100-form-title {
+  display: block;
+  font-size: 30px;
+  line-height: 1.6;
+  text-align: center;
+}
 
+/* Block input */
+.wrap-input100 {
+  width: 100%;
+  margin: 55px auto;
+  border-bottom: 2px solid red;
+}
+
+.validate-input {
+  position: relative;
+}
+
+/* Input */
+input {
+  outline: none;
+  border: none;
+}
+
+.input100 {
+  width: 100%;
+  height: 28px;
+  font-size: 15px;
+  padding: 0px 5px;
+  background: rgb(0, 247, 255);
+}
+
+.input100:focus {
+  width: 100%;
+  height: 28px;
+  font-size: 15px;
+  padding: 0px 5px;
+  background: rgb(0, 255, 55);
+}
+
+.focus-input100 {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 5px;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: attr(data-placeholder);
+}
+
+.focus-input100::after {
+  content: attr(data-placeholder);
+  color: red;
+}
